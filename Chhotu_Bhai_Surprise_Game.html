@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>For My Chhotu Bhai 💙</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Fredoka:wght@500;700&display=swap');
+*{box-sizing:border-box}body{margin:0;font-family:'Baloo 2',sans-serif;color:#29466e;background:radial-gradient(circle at top,#fff,#dff1ff 48%,#cbc9ff);min-height:100vh}
+.s{display:none;min-height:100vh;align-items:center;justify-content:center;padding:20px}.s.a{display:flex}.card{width:min(700px,95vw);padding:34px 22px;text-align:center;background:#ffffffd5;backdrop-filter:blur(15px);border-radius:32px;box-shadow:0 25px 70px #315b8c22}
+h1,h2{font-family:Fredoka;color:#3478c8}h1{font-size:clamp(35px,8vw,58px)}h2{font-size:clamp(27px,6vw,42px)}p{font-size:18px;line-height:1.55}.emo{font-size:75px;animation:b 2s infinite}.small{font-size:14px;color:#7085a5}
+@keyframes b{50%{transform:translateY(-10px)}}button{border:0;border-radius:30px;padding:13px 27px;margin:7px;background:linear-gradient(135deg,#4d9be9,#7060dc);color:white;font:bold 17px 'Baloo 2';cursor:pointer;box-shadow:0 8px 20px #4876b533}button:hover{transform:translateY(-3px)}input{width:min(430px,90%);padding:16px;border:2px solid #a9cff5;border-radius:18px;text-align:center;font:600 17px 'Baloo 2'}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:570px;margin:20px auto}.tile{background:#f7fbff;border:2px solid transparent;border-radius:20px;padding:17px 6px;cursor:pointer}.tile:hover,.sel{border-color:#619fe4;background:#eaf6ff;transform:translateY(-4px)}.icon{font-size:42px}.game{background:#f7fbff;border-radius:22px;padding:18px;margin:18px auto;max-width:560px}.targetArea{height:270px;background:#e6f3ff;border-radius:18px;position:relative}.target{position:absolute;font-size:45px;cursor:pointer}.rps button{font-size:35px}.memory{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.mem{height:65px;padding:0;font-size:27px}.scratch{position:relative;width:min(520px,92vw);height:240px;margin:20px auto;background:white;border-radius:22px;overflow:hidden}.secret{height:100%;display:flex;align-items:center;justify-content:center;padding:25px;font-size:21px;line-height:1.5;font-weight:bold}.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}.hug{font-size:130px;animation:h 1s infinite alternate}@keyframes h{to{transform:scale(1.12)}}.conf{position:fixed;top:-20px;z-index:9;font-size:25px;animation:f 3s linear forwards}@keyframes f{to{transform:translateY(110vh) rotate(600deg);opacity:0}}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+
+<section class="s a" id="s1"><div class="card"><div class="emo">👦💙</div><h1>Hey, Chhotu!</h1><p>A little surprise made specially<br><b>for my cutest little brother. 🫶</b></p><h2>What's your name?</h2><input id="nm" placeholder="Enter your name..."><br><button onclick="nameGo()">Let's Go! 🚀</button><p id="e" class="small"></p></div></section>
+
+<section class="s" id="s2"><div class="card"><div class="emo">🎮</div><h2>Choose Your Favourite Game!</h2><p>Pick one and let's play 😎</p><div class="grid" id="games"></div><button onclick="play()">Play 🎮</button><p id="eg" class="small"></p></div></section>
+
+<section class="s" id="s3"><div class="card"><h2 id="gt"></h2><div id="game"></div><button onclick="show(4)">Next Surprise 💙</button></div></section>
+
+<section class="s" id="s4"><div class="card"><div class="emo">🍕🍔🍦</div><h2>What's Your Favourite Food?</h2><p>If you could eat anything right now, what would you choose? 😋</p><div class="grid" id="foods"></div><button onclick="foodGo()">I Choose This! 😋</button><p id="ef" class="small"></p></div></section>
+
+<section class="s" id="s5"><div class="card"><div class="emo">👩‍🍳👦</div><h1>Okayyy! 😂</h1><h2 id="foodmsg"></h2><p>Your sister officially becomes your <b>food partner</b> today! 💙</p><button onclick="show(6)">One More Game 🎮</button></div></section>
+
+<section class="s" id="s6"><div class="card"><div class="emo">🧠✨</div><h2>Quick Brother Challenge!</h2><p>Which one is different?</p><div class="grid" id="quiz"></div><h2 id="qm"></h2><button id="qn" style="display:none" onclick="show(7)">Next 💌</button></div></section>
+
+<section class="s" id="s7"><div class="card"><div class="emo">🎁</div><h2>Secret Card For You</h2><p>Scratch with your finger or mouse… 👀</p><div class="scratch"><div class="secret">You are my cutest Chhotu Bhai! 💙<br>No matter how much we fight, you will always be my little brother.<br><br>I'll always be there for you. 🫶</div><canvas id="cv"></canvas></div><p id="sm" class="small">Keep scratching… ✨</p><button onclick="show(8)">Final Surprise 🤗</button></div></section>
+
+<section class="s" id="s8"><div class="card"><div class="hug">🤗</div><div class="emo">💙</div><h1>BIGGEST HUG!</h1><h2 id="fn"></h2><p>No matter how big you grow, you will always be my <b>Chhotu Bhai.</b> 🥹</p><p><b>Hamesha tamari sister tamari sathe che. ❤️</b></p><h2>Love you so much, Chhotu! 💙</h2><button onclick="location.reload()">Play Again 🔄</button></div></section>
+
+<script>
+let user="",gc=null,fc=null,rot=0;
+const G=[["🎯","Target Click","t"],["✊","Rock Paper Scissors","r"],["🧠","Memory Match","m"]];
+const F=[["🍕","Pizza"],["🍔","Burger"],["🍟","Fries"],["🍦","Ice Cream"],["🍫","Chocolate"],["🍜","Noodles"]];
+function show(n){document.querySelectorAll(".s").forEach(x=>x.classList.remove("a"));document.getElementById("s"+n).classList.add("a");scrollTo(0,0)}
+function tiles(id,a,fn){let q=document.getElementById(id);a.forEach(x=>{let b=document.createElement("div");b.className="tile";b.innerHTML='<div class="icon">'+x[0]+'</div><b>'+x[1]+'</b>';b.onclick=()=>{q.querySelectorAll(".tile").forEach(y=>y.classList.remove("sel"));b.classList.add("sel");fn(x)};q.appendChild(b)})}
+tiles("games",G,x=>gc=x);tiles("foods",F,x=>fc=x);
+function nameGo(){let v=nm.value.trim();if(!v){e.textContent="Please enter your name 💙";return}user=v;show(2)}
+function play(){if(!gc){eg.textContent="Choose a game first 🎮";return}gt.textContent=gc[0]+" "+gc[1];build(gc[2]);show(3)}
+function build(t){game.innerHTML="";if(t=="t"){game.innerHTML='<div class="game"><b>Score: <span id="sc">0</span> | 20 seconds</b><div class="targetArea" id="ta"><span class="target" id="tg">🎯</span></div></div>';targetGame()}if(t=="r"){game.innerHTML='<div class="game rps"><h2 id="rm">Choose your move!</h2><button onclick="rps(0)">✊</button><button onclick="rps(1)">✋</button><button onclick="rps(2)">✌️</button></div>'}if(t=="m"){game.innerHTML='<div class="game"><div class="memory" id="mm"></div></div>';memory()}}
+function targetGame(){let n=0,time=20,tg=document.getElementById("tg"),ta=document.getElementById("ta");function mv(){tg.style.left=Math.random()*(ta.clientWidth-50)+"px";tg.style.top=Math.random()*(ta.clientHeight-50)+"px"}tg.onclick=()=>{n++;sc.textContent=n;mv()};mv();let z=setInterval(()=>{time--;if(time<=0){clearInterval(z);tg.style.display="none"}},1000)}
+let pw=0,cw=0;function rps(p){let c=Math.floor(Math.random()*3),a=["Rock","Paper","Scissors"],win=(p-c+3)%3==1;if(win)pw++;else if(p!=c)cw++;rm.textContent=`You: ${a[p]} | Computer: ${a[c]} | ${win?"You win! 🎉":p==c?"Draw! 😄":"Try again! 😜"} (${pw}-${cw})`;if(pw>=3||cw>=3){rm.textContent=pw>=3?"You WON! 🏆💙":"Computer won! 😜 Try again!";pw=cw=0}}
+function memory(){let a=["🐶","🐱","🍕","🚗","🐶","🐱","🍕","🚗"].sort(()=>Math.random()-.5),o=[];a.forEach(v=>{let b=document.createElement("button");b.className="mem";b.textContent="❓";b.onclick=()=>{if(o.length>=2||b.classList.contains("open"))return;b.textContent=v;b.classList.add("open");o.push({b,v});if(o.length==2){if(o[0].v==o[1].v)o=[];else setTimeout(()=>{o.forEach(x=>{x.b.textContent="❓";x.b.classList.remove("open")});o=[]},600)}};mm.appendChild(b)})}
+function foodGo(){if(!fc){ef.textContent="Choose your favourite food first 😋";return}foodmsg.textContent=user+", you chose "+fc[1]+"! 🍽️";show(5)}
+["🍎 Apple","🍌 Banana","🍎 Apple","🍎 Apple"].forEach((x,i)=>{let b=document.createElement("div");b.className="tile";b.textContent=x;b.onclick=()=>{if(i==1){qm.textContent="Correct! 🏆 You're smart, Chhotu!";qn.style.display="inline-block"}else qm.textContent="Nope! Try again 😜"};quiz.appendChild(b)});
+let cv=document.getElementById("cv"),cx=cv.getContext("2d"),count=0;function init(){cv.width=cv.offsetWidth*devicePixelRatio;cv.height=cv.offsetHeight*devicePixelRatio;cx.scale(devicePixelRatio,devicePixelRatio);cx.fillStyle="#a99caf";cx.fillRect(0,0,cv.offsetWidth,cv.offsetHeight);cx.fillStyle="#fff";cx.font="bold 25px Baloo 2";cx.textAlign="center";cx.fillText("✨ SCRATCH HERE ✨",cv.offsetWidth/2,cv.offsetHeight/2)}function scratch(e){let r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;cx.globalCompositeOperation="destination-out";cx.beginPath();cx.arc(x,y,27,0,7);cx.fill();if(++count>40)sm.textContent="Secret unlocked! 💙✨"}cv.onpointermove=e=>{if(e.buttons)scratch(e)};init();
+document.querySelector("#s8 button").onclick=()=>location.reload();
+</script></body></html>
